@@ -18,9 +18,7 @@ function createHeart() {
 setInterval(createHeart, 200);
 
 // ======================== Typewriter ===========================
-const text = `Hi Nana!
-
-Semangat menjalani harinya ya!
+const text = `Hi Nana!, Semangat menjalani harinya ya!
 Kalau kamu ngerasa hari-harimu berat silahkan bersandar kepadaku.
 Akan kupinjamkan bahuku untukmu bersandar.
 Jangan sungkan untuk cerita ya Nana!
@@ -49,12 +47,7 @@ function typeWriter() {
 typeWriter();
 
 // ======================== BGM ===========================
-const bgm = document.getElementById("bgm");
-
-document.addEventListener("click", () => {
-  // Chrome/Opera biasanya butuh interaksi sebelum boleh play
-  bgm.play().catch(()=>{});
-});
+document.getElementById("bgm").volume = 0.3;
 
 // ======================== Disk Animation ===========================
 document.getElementById("title").textContent = "Violet";
