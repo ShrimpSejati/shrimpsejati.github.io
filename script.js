@@ -48,6 +48,11 @@ typeWriter();
 
 // ======================== BGM ===========================
 document.getElementById("bgm").volume = 0.3;
+const audio = document.getElementById("bgm");
+
+  document.body.addEventListener("click", () => {
+    audio.play();
+  });
 
 // ======================== Disk Animation ===========================
 document.getElementById("title").textContent = "Violet";
