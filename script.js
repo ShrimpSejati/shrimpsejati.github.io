@@ -47,7 +47,17 @@ function typeWriter() {
 typeWriter();
 
 // ======================== BGM ===========================
-document.getElementById("bgm").volume = 0.3;
+const bgm = document.getElementById("bgm");
+bgm.volume = 0.3;
+
+// Browser modern memblokir autoplay, jadi kita aktifkan setelah 1x klik
+function enableMusic() {
+  bgm.play().catch(() => {});
+  document.removeEventListener("click", enableMusic); 
+}
+
+// aktifkan saat user klik pertama di mana saja
+document.addEventListener("click", enableMusic);
 
 // ======================== Disk Animation ===========================
 document.getElementById("title").textContent = "Violet";
