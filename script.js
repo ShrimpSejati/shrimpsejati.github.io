@@ -49,19 +49,25 @@ function typeWriter() {
 typeWriter();
 
 // ======================== BGM ===========================
-document.getElementById("bgm").volume = 0.3;
 const bgm = document.getElementById("bgm");
+const musicBtn = document.getElementById("musicBtn");
 
-// autoplay muted (diijinkan browser)
-bgm.muted = true;
-bgm.play();
+let isPlaying = false;
 
-// setelah 1 klik → unmute dan mulai normal
-document.addEventListener("click", () => {
-  bgm.muted = false;
-  bgm.play();
-}, { once: true });
+// mencegah autoplay error
+bgm.volume = 0.3;
 
+musicBtn.addEventListener("click", () => {
+  if (!isPlaying) {
+    bgm.play();
+    isPlaying = true;
+    musicBtn.textContent = "❚❚ Pause Music";
+  } else {
+    bgm.pause();
+    isPlaying = false;
+    musicBtn.textContent = "▶ Play Music";
+  }
+});
 // ======================== Disk Animation ===========================
 document.getElementById("title").textContent = "Violet";
 document.getElementById("artist").textContent = "ninomae inanis";
