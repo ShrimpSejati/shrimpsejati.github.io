@@ -50,11 +50,17 @@ typeWriter();
 
 // ======================== BGM ===========================
 document.getElementById("bgm").volume = 0.3;
-const audio = document.getElementById("bgm");
+const bgm = document.getElementById("bgm");
 
-  document.body.addEventListener("click", () => {
-    audio.play();
-  });
+// autoplay muted (diijinkan browser)
+bgm.muted = true;
+bgm.play();
+
+// setelah 1 klik → unmute dan mulai normal
+document.addEventListener("click", () => {
+  bgm.muted = false;
+  bgm.play();
+}, { once: true });
 
 // ======================== Disk Animation ===========================
 document.getElementById("title").textContent = "Violet";
