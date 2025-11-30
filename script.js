@@ -55,7 +55,7 @@ const musicBtn = document.getElementById("musicBtn");
 let isPlaying = false;
 
 // mencegah autoplay error
-bgm.volume = 0.3;
+bgm.volume = 0.8;
 
 musicBtn.addEventListener("click", () => {
   if (!isPlaying) {
@@ -68,6 +68,7 @@ musicBtn.addEventListener("click", () => {
     musicBtn.textContent = "▶ Play Music";
   }
 });
+
 // ======================== Disk Animation ===========================
 document.getElementById("title").textContent = "Violet";
 document.getElementById("artist").textContent = "ninomae inanis";
