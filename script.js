@@ -48,7 +48,7 @@ typeWriter();
 
 // ======================== BGM ===========================
 const bgm = document.getElementById("bgm");
-bgm.volume = 0.3;
+bgm.volume = 0.1;
 
 // Browser modern memblokir autoplay, jadi kita aktifkan setelah 1x klik
 function enableMusic() {
