@@ -43,27 +43,30 @@ body {
 }
 
 .disc-container {
-  position: fixed;
+  position: absolute;
   bottom: 20px;
   left: 20px;
+
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
-/* disk */
+
 .disc {
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   overflow: hidden;
+  animation: spin 7s linear infinite;
+  border: 4px solid #222;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
 }
 
-.disc-img {
+.disc img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  animation: spin 4s linear infinite;
+  object-fit: cover;
 }
 
 
@@ -72,17 +75,17 @@ body {
 }
 
 .song-info h2 {
-  color: white;
   margin: 0;
-  font-size: 22px;
+  font-size: 24px;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .song-info p {
-  color: #ddd;
-  margin: 5px 0 0;
-  font-size: 16px;
+  margin-top: 5px;
+  opacity: 0.8;
+  font-size: 18px;
+  font-family: Helvetica, Arial, sans-serif;
 }
-
 
 @keyframes spin {
   from { transform: rotate(0deg); }
