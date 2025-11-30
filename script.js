@@ -50,23 +50,10 @@ typeWriter();
 
 // ======================== BGM ===========================
 const bgm = document.getElementById("bgm");
-const musicBtn = document.getElementById("musicBtn");
 
-let isPlaying = false;
-
-// mencegah autoplay error
-bgm.volume = 0.8;
-
-musicBtn.addEventListener("click", () => {
-  if (!isPlaying) {
-    bgm.play();
-    isPlaying = true;
-    musicBtn.textContent = "❚❚ Pause Music";
-  } else {
-    bgm.pause();
-    isPlaying = false;
-    musicBtn.textContent = "▶ Play Music";
-  }
+document.addEventListener("click", () => {
+  // Chrome/Opera biasanya butuh interaksi sebelum boleh play
+  bgm.play().catch(()=>{});
 });
 
 // ======================== Disk Animation ===========================
