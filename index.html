@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="heart.png" />
+  <link rel="icon" type="image/png" href="logo/heart.png" />
   <title>Untuk Nana</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -14,18 +14,38 @@
     <span id="cursor"></span>
   </div>
 
-  <div class="disc-container">
-    <div class="disc">
-      <img src="disc.png" alt="disc">
-    </div>
+  <div class="bg-heart"></div>
 
-    <div class="song-info">
-      <h2 id="title">Violet</h2>
-      <p id="artist">ninomae inanis</p>
-    </div>
+  <div class="bg-heart-glow"></div>
+
+
+  <div class="disc-container">
+  <div class="disc">
+    <img id="disc-image" src="disc.png">
   </div>
-  <audio id="bgm" src="bgm.mp3" autoplay loop hidden> </audio>
+
+
+  <div class="song-info">
+    <h2 id="title">Song Title</h2>
+    <p id="artist">Artist Name</p>
+
+    <button id="prevBtn" class="music-btn">Prev</button>  
+
+    <!-- PLAY / PAUSE BUTTON DI TENGAH -->
+<button id="playPauseBtn" class="music-btn">▶️</button>
+
+    <button id="nextBtn" class="music-btn">Next</button>
+  </div>
+</div>
+
+<img id="disc-image" class="fade" src="disc1.png">
+
+<h2 id="title" class="fade"></h2>
+<p id="artist" class="fade"></p>
+
+
+  </div>
+  <audio id="bgm" src="bgm/bgm1.mp3" autoplay loop hidden> </audio>
   <script src="script.js"></script>
 </body>
 </html>
-
